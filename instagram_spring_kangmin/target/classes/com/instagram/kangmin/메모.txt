@@ -1,0 +1,49 @@
+http 상태코드
+https://developer.mozilla.org/ko/docs/Web/HTTP/Status
+404, 500 등등
+
+400 - 문법이 잘못됬을때, 메소드가 없거나 해당 메소드를 찾을수 없을때
+
+404 - 경로 문제
+매핑이 안될경우, return때 jsp파일을 불러올수 없을때
+
+405 - 파라미터 형식이 잘못됬을때
+
+500 - 소스코드가 잘못됬다
+
+프론트(클라이언트)
+요청방법 - 
+1. 주소창에 입력후 엔터 - get
+2. a태그에서 href - get
+3. form에서 submit - get, post
+4. location => href, replace - get
+5. 비동기 요청(js) - (get, post, put, delete) => jQuery, fetch(브라우저 내장)
+
+===========================================================================================
+
+백(서버)
+sendRedirect 방법중에 컨트롤러에서 리타이렉트 방법
+컨트롤러에 @responsebody를 없애고, return때 "redirect:경로"
+"redirect: /kangmin/auth/signin" == "redirect:/auth/signin"
+redirect:에 스페이스바 한칸 띄우면 무조건 절대경로를 써주고 아니면 상대경로를 써준다
+
+
+
+응답방법 = 
+
+서블릿 디스패처 => 맵핑 핸들러 => 컨트롤러를 지정 => 컨트롤러의 메서드 호출 => 메소드에서 리턴
+리턴의 종류 - 
+@ResponseBody가 붙어있을 때 html, text, json, xml, 데이터(byte)-사진이나 동영상파일들
+
+@ResponseBody가 붙지 않을때 jsp파일 리턴(viewResolver)
+
+@RequestBody => json객체를 받을떄 쓴다
+
+
+
+
+
+
+
+
+

@@ -37,6 +37,23 @@ public class AuthFilter implements Filter {
 		
 		HttpSession session = httpServletRequest.getSession();
 		
+		User user = (User)session.getAttribute("login");
+		
+		String path = httpServletRequest.getRequestURI();
+		
+		if(path.contains("/kangmin/auth")) {
+			if(user != null) {
+				httpServletResponse.sendRedirect("/kangmin/");
+				System.out.println("로그인 되어 필터에 걸림");
+				return;
+			}else if(user == null){
+//				httpServletResponse.sendRedirect("/kangmin/auth/signin");
+//				return;
+			}
+		}
+		
+		
+		chain.doFilter(httpServletRequest, httpServletResponse);
 		
 	}
 	

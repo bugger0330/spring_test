@@ -30,15 +30,11 @@ public class AuthServiceImpl implements AuthService {
 	@Override
 	public boolean signin(String username, String password) {
 		User user = checkId.checkUserId(username);
-		boolean result = false;
-		if(user == null) {
-			return result = false;
-		}else {
-			if(BCrypt.checkpw(password, user.getPassword())) {
-				return result = true;
+		if(BCrypt.checkpw(password, user.getPassword())) {
+				
+				return true;
 			}
-			return result = false;
-		}
+		return true;
 	}
 
 

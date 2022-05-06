@@ -1,5 +1,6 @@
 package com.instagram.kangmin.service;
 
+import com.instagram.kangmin.domain.user.User;
 import com.instagram.kangmin.web.dto.SignupRequestDto;
 
 

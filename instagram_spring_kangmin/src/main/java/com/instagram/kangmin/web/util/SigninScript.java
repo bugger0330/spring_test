@@ -2,6 +2,7 @@ package com.instagram.kangmin.web.util;
 
 public class SigninScript {
 	
+
 	public String signinScript(boolean result) {
 		StringBuilder script = new StringBuilder();
 		
@@ -10,6 +11,7 @@ public class SigninScript {
 			script.append("alert(\"로그인 완료.\");");
 			script.append("location.replace(\"/kangmin/index\");"); // replace 히스토리가 삭제되서 뒤로가기가 안된다
 			script.append("</script>");
+			
 		}else {
 			script.append("<script>");
 			script.append("alert(\"로그인 실패.\");");

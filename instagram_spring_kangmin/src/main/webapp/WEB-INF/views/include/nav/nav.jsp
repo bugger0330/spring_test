@@ -6,7 +6,7 @@
     <link rel="stylesheet" href="/kangmin/static/css/style.css">
     <link rel="stylesheet" href="/kangmin/static/css/nav.css">
     <script src="https://kit.fontawesome.com/47c84cc5a4.js" crossorigin="anonymous"></script>
-    <script type="text/javascript" src="https://code.jquery.com/jquery-latest.min.js"></script>
+    <script type="text/javascript" src="https://code.jquery.com/jquery-latest.min.js ss"></script>
 </head>
 
             <nav class="nav-container">
